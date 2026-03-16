@@ -15,8 +15,6 @@ html{scroll-behavior:smooth;}
 }
 body{background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;overflow-x:hidden;}
 
-
-
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.1rem 3rem;
   display:flex;justify-content:space-between;align-items:center;transition:background .3s,box-shadow .3s;}
@@ -24,8 +22,7 @@ nav.sc{background:rgba(248,245,240,.95);backdrop-filter:blur(12px);box-shadow:0 
 .logo{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--ink);text-decoration:none;letter-spacing:-.02em;}
 .logo em{font-style:italic;color:var(--gold);}
 .nl{display:flex;gap:2.2rem;list-style:none;}
-.nl a{font-size:.78rem;font-weight:500;color:var(--ink2);text-decoration:none;letter-spacing:.06em;text-transform:uppercase;
-  transition:color .2s;position:relative;}
+.nl a{font-size:.78rem;font-weight:500;color:var(--ink2);text-decoration:none;letter-spacing:.06em;text-transform:uppercase;transition:color .2s;position:relative;}
 .nl a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;background:var(--gold);transition:width .3s;}
 .nl a:hover,.nl a.act{color:var(--ink);}
 .nl a:hover::after,.nl a.act::after{width:100%;}
@@ -34,7 +31,7 @@ nav.sc{background:rgba(248,245,240,.95);backdrop-filter:blur(12px);box-shadow:0 
 .ncta:hover{background:var(--ink);color:var(--bg);}
 
 /* HERO */
-#hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:100px;overflow:hidden;}
+#hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:80px;overflow:hidden;}
 .hl{display:flex;flex-direction:column;justify-content:center;padding:5rem 3rem;}
 .eyebrow{display:flex;align-items:center;gap:.7rem;margin-bottom:1.8rem;opacity:0;animation:rise .7s ease .2s forwards;}
 .eline{width:30px;height:1px;background:var(--gold);}
@@ -64,19 +61,8 @@ nav.sc{background:rgba(248,245,240,.95);backdrop-filter:blur(12px);box-shadow:0 
 .pf{width:300px;height:385px;position:relative;}
 .pdeco{position:absolute;top:-11px;left:-11px;width:100%;height:100%;border:1.5px solid var(--gold);border-radius:3px;z-index:0;}
 .pc{position:relative;z-index:1;width:100%;height:100%;background:var(--bg);border-radius:3px;overflow:hidden;
-  box-shadow:0 20px 60px var(--sh2);cursor:pointer;transition:transform .3s;}
-.pc:hover{transform:translateY(-4px);}
-#profile-photo{width:100%;height:100%;object-fit:cover;object-position:top center;display:none;}
-#profile-photo.on{display:block;}
-.ph{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:.9rem;background:linear-gradient(135deg,var(--bg2),var(--bg));transition:background .3s;}
-.ph.off{display:none;}
-.ph:hover{background:linear-gradient(135deg,var(--gold-l),var(--bg2));}
-.phi{width:68px;height:68px;border-radius:50%;background:var(--border);display:flex;align-items:center;justify-content:center;font-size:1.9rem;}
-.pht p{font-size:.83rem;font-weight:500;color:var(--ink2);margin-bottom:.2rem;text-align:center;}
-.pht span{font-family:'DM Mono',monospace;font-size:.62rem;color:var(--muted);letter-spacing:.05em;display:block;text-align:center;}
-.uhi{font-family:'DM Mono',monospace;font-size:.6rem;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;
-  padding:.32rem .75rem;border:1px solid var(--gold-l);border-radius:2px;background:rgba(201,168,76,.08);}
+  box-shadow:0 20px 60px var(--sh2);}
+#profile-photo{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;}
 .pbadge{position:absolute;background:var(--white);border-radius:6px;padding:.55rem .85rem;
   box-shadow:0 8px 24px var(--sh2);z-index:2;animation:fb 4s ease-in-out infinite;}
 .pb1{bottom:-14px;left:-38px;animation-delay:0s;}
@@ -94,7 +80,7 @@ nav.sc{background:rgba(248,245,240,.95);backdrop-filter:blur(12px);box-shadow:0 
 
 /* SECTION COMMON */
 .slabel{display:flex;flex-direction:column;gap:.45rem;}
-.slabel.sticky{position:sticky;top:120px;}
+.slabel.sticky{position:sticky;top:100px;}
 .snum{font-family:'DM Mono',monospace;font-size:.63rem;color:var(--gold);letter-spacing:.15em;}
 .stitle{font-family:'Playfair Display',serif;font-size:2.1rem;font-weight:700;line-height:1.1;letter-spacing:-.02em;}
 .stitle em{font-style:italic;color:var(--gold);}
@@ -241,13 +227,10 @@ footer p span{color:var(--gold);}
   #hero,.hl,#about,#skills,#projects,#education,#ach,#contact{padding:4rem 1.5rem;}
   .achg{grid-template-columns:1fr;}
   footer{padding:1.4rem 1.5rem;flex-direction:column;text-align:center;}
-  #banner{padding:.5rem 1.2rem;font-size:.62rem;}
 }
 </style>
 </head>
 <body>
-
-
 
 <!-- NAV -->
 <nav id="nav">
@@ -259,7 +242,7 @@ footer p span{color:var(--gold);}
     <li><a href="#education">Education</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="/cdn-cgi/l/email-protection#87f4ecf3e6f4e9eeeab5b7b7b2c7e0eae6eeeba9e4e8ea" class="ncta">Hire Me</a>
+  <a href="mailto:sktasnim2005@gmail.com" class="ncta">Hire Me</a>
 </nav>
 
 <!-- HERO -->
@@ -273,10 +256,10 @@ footer p span{color:var(--gold);}
     <p class="htag">3rd year Computer Science student at Northern University of Business and Technology, Khulna — passionate about AI, computer vision, and building software that matters.</p>
     <div class="hbtns">
       <a href="#projects" class="bp">View My Work</a>
-      <a href="/cdn-cgi/l/email-protection#14677f6075677a7d7926242421547379757d783a777b79" class="bo">Get In Touch</a>
+      <a href="mailto:sktasnim2005@gmail.com" class="bo">Get In Touch</a>
     </div>
     <div class="hmeta">
-      <div><div class="mn">5.0<em>★</em></div><div class="ml">HSC &amp; SSC GPA</div></div>
+      <div><div class="mn">5.0<em>&#9733;</em></div><div class="ml">HSC &amp; SSC GPA</div></div>
       <div><div class="mn">3<em>+</em></div><div class="ml">Projects Built</div></div>
       <div><div class="mn">2</div><div class="ml">Ambassador Roles</div></div>
     </div>
@@ -287,22 +270,15 @@ footer p span{color:var(--gold);}
     <div class="pfw">
       <div class="pf">
         <div class="pdeco"></div>
-        <div class="pc" onclick="document.getElementById('photo-input').click()" title="Click to add your photo">
-          <img id="profile-photo" src="photo.jpg" alt="SK. Tasnim Ur Rahman" class="on" onerror="this.classList.remove('on');document.getElementById('ph-placeholder').classList.remove('off');">
-          <div class="ph off" id="ph-placeholder">
-            <div class="phi">👤</div>
-            <div class="pht">
-              <p>Your Photo Here</p>
-              <span>Click to upload</span>
-            </div>
-            <span class="uhi">+ Add Photo</span>
-          </div>
+        <div class="pc">
+          <img id="profile-photo" src="photo.jpg" alt="SK. Tasnim Ur Rahman"
+               onerror="this.style.display='none'">
         </div>
         <div class="pbadge pb1">
           <div class="bi"><div class="bdot"></div><div><div class="bt">Available</div><div class="bs">For internships</div></div></div>
         </div>
         <div class="pbadge pb2">
-          <div class="bi"><div class="bico">🤖</div><div><div class="bt">AI Developer</div><div class="bs">Computer Vision</div></div></div>
+          <div class="bi"><div class="bico">&#129302;</div><div><div class="bt">AI Developer</div><div class="bs">Computer Vision</div></div></div>
         </div>
       </div>
     </div>
@@ -314,21 +290,28 @@ footer p span{color:var(--gold);}
 <!-- ABOUT -->
 <section id="about">
   <div class="slabel sticky reveal">
-    <span class="snum">01 — About</span>
+    <span class="snum">01 &mdash; About</span>
     <h2 class="stitle">Who<br>I <em>Am</em></h2>
   </div>
   <div>
     <p class="alead reveal">A motivated developer who believes great software is built at the intersection of curiosity and craft.</p>
     <div class="abody reveal">
-      <p>I'm currently in my 3rd year of B.Sc. in Computer Science & Engineering at <strong>Northern University of Business and Technology, Khulna</strong>. My academic journey is driven by a deep fascination with how machines can see and solve real-world problems.</p>
+      <p>I'm currently in my 3rd year of B.Sc. in Computer Science &amp; Engineering at <strong>Northern University of Business and Technology, Khulna</strong>. My academic journey is driven by a deep fascination with how machines can see and solve real-world problems.</p>
       <p>My core strength lies in <strong>Python and computer vision</strong> — I've built a real-time face recognition attendance system from scratch, integrating OpenCV, Haar Cascades, and database connectivity. Currently expanding it with Google Sheets cloud integration.</p>
       <p>Beyond technical skills, I'm a community builder — serving as <strong>Campus Ambassador</strong> for both ICT Olympiad Season 3 and Shohoj Coding, helping foster a coding culture at my university.</p>
       <p>I hold <strong>perfect GPA scores (5.00)</strong> in both SSC and HSC — a reflection of my consistent dedication to excellence.</p>
     </div>
     <div class="atags reveal">
-      <span class="tag">Python Advanced</span><span class="tag">Computer Vision</span><span class="tag">OpenCV</span>
-      <span class="tag">DSA</span><span class="tag">OOP</span><span class="tag">Linux</span>
-      <span class="tag">Git</span><span class="tag">Flask</span><span class="tag">Khulna, BD</span><span class="tag">Open to Remote</span>
+      <span class="tag">Python Advanced</span>
+      <span class="tag">Computer Vision</span>
+      <span class="tag">OpenCV</span>
+      <span class="tag">DSA</span>
+      <span class="tag">OOP</span>
+      <span class="tag">Linux</span>
+      <span class="tag">Git</span>
+      <span class="tag">Flask</span>
+      <span class="tag">Khulna, BD</span>
+      <span class="tag">Open to Remote</span>
     </div>
   </div>
 </section>
@@ -337,7 +320,7 @@ footer p span{color:var(--gold);}
 <section id="skills">
   <div class="skl">
     <div class="slabel sticky reveal">
-      <span class="snum" style="color:var(--gold)">02 — Skills</span>
+      <span class="snum" style="color:var(--gold)">02 &mdash; Skills</span>
       <h2 class="stitle">Tech<br><em>Stack</em></h2>
     </div>
     <div>
@@ -358,9 +341,14 @@ footer p span{color:var(--gold);}
       <div class="skg reveal">
         <div class="sgt">Tools &amp; Platforms</div>
         <div class="tg">
-          <div class="tc">Git</div><div class="tc">VS Code</div><div class="tc">Linux Mint</div>
-          <div class="tc">Ubuntu</div><div class="tc">macOS</div><div class="tc">GitHub</div>
-          <div class="tc">Sheets API</div><div class="tc">Haar Cascades</div>
+          <div class="tc">Git</div>
+          <div class="tc">VS Code</div>
+          <div class="tc">Linux Mint</div>
+          <div class="tc">Ubuntu</div>
+          <div class="tc">macOS</div>
+          <div class="tc">GitHub</div>
+          <div class="tc">Sheets API</div>
+          <div class="tc">Haar Cascades</div>
         </div>
       </div>
     </div>
@@ -371,7 +359,7 @@ footer p span{color:var(--gold);}
 <section id="projects">
   <div class="pjl">
     <div class="slabel sticky reveal">
-      <span class="snum">03 — Projects</span>
+      <span class="snum">03 &mdash; Projects</span>
       <h2 class="stitle">What<br>I've<br><em>Built</em></h2>
     </div>
     <div class="pcards">
@@ -380,8 +368,12 @@ footer p span{color:var(--gold);}
         <h3 class="ptitle">Face Recognition Attendance System</h3>
         <p class="pdesc">A real-time automated attendance system powered by computer vision. Detects and identifies faces using Haar Cascade classifiers, logs attendance with timestamps, and stores data persistently. Currently integrating Google Sheets API for cloud-based access and reporting.</p>
         <div class="ptech">
-          <span class="tpill">Python</span><span class="tpill">OpenCV</span><span class="tpill">Pandas</span>
-          <span class="tpill">Haar Cascades</span><span class="tpill">Google Sheets API</span><span class="tpill">SQLite</span>
+          <span class="tpill">Python</span>
+          <span class="tpill">OpenCV</span>
+          <span class="tpill">Pandas</span>
+          <span class="tpill">Haar Cascades</span>
+          <span class="tpill">Google Sheets API</span>
+          <span class="tpill">SQLite</span>
         </div>
         <div class="pfoot">
           <a href="https://github.com/sktasnim2005" target="_blank" class="plink">
@@ -391,12 +383,16 @@ footer p span{color:var(--gold);}
           <div class="pstat" style="color:#22c55e"><div class="pdot" style="background:#22c55e"></div>In Progress</div>
         </div>
       </div>
+
       <div class="pcard reveal">
         <div class="ph2"><span class="pnum">PROJECT 002</span></div>
         <h3 class="ptitle">Python GUI Game Suite</h3>
         <p class="pdesc">A collection of three interactive desktop games built with Python and Tkinter: Hangman with categorized word banks, a Number Guessing game with difficulty levels, and a Quiz Game with score tracking and multiple-choice UI. Each features a polished, user-friendly interface.</p>
         <div class="ptech">
-          <span class="tpill">Python</span><span class="tpill">Tkinter</span><span class="tpill">GUI Design</span><span class="tpill">Game Logic</span>
+          <span class="tpill">Python</span>
+          <span class="tpill">Tkinter</span>
+          <span class="tpill">GUI Design</span>
+          <span class="tpill">Game Logic</span>
         </div>
         <div class="pfoot">
           <a href="https://github.com/sktasnim2005" target="_blank" class="plink">
@@ -414,18 +410,18 @@ footer p span{color:var(--gold);}
 <section id="education">
   <div class="edl">
     <div class="slabel sticky reveal">
-      <span class="snum">04 — Education</span>
+      <span class="snum">04 &mdash; Education</span>
       <h2 class="stitle">My<br><em>Academic</em><br>Path</h2>
     </div>
     <div class="reveal">
       <div class="eti">
         <div class="etc"><div class="edot"></div><div class="eline2"></div></div>
         <div><div class="ebody">
-          <div class="eyear">2023 — Present</div>
+          <div class="eyear">2023 &mdash; Present</div>
           <div class="edeg">B.Sc. in Computer Science &amp; Engineering</div>
           <div class="einst">Northern University of Business and Technology, Khulna</div>
-          <span class="egpa">📍 Currently Enrolled — 3rd Year</span>
-          <div class="esub">Relevant Coursework: Data Structures · Algorithms · Object-Oriented Programming · Computer Architecture</div>
+          <span class="egpa">Currently Enrolled &mdash; 3rd Year</span>
+          <div class="esub">Relevant Coursework: Data Structures &middot; Algorithms &middot; Object-Oriented Programming &middot; Computer Architecture</div>
         </div></div>
       </div>
       <div class="eti">
@@ -434,7 +430,7 @@ footer p span{color:var(--gold);}
           <div class="eyear">2022</div>
           <div class="edeg">Higher Secondary Certificate (HSC)</div>
           <div class="einst">Govt. Sundarban Adarsha College, Jessore</div>
-          <span class="egpa">⭐ GPA 5.00 / 5.00 — Perfect Score</span>
+          <span class="egpa">GPA 5.00 / 5.00 &mdash; Perfect Score</span>
         </div></div>
       </div>
       <div class="eti">
@@ -443,7 +439,7 @@ footer p span{color:var(--gold);}
           <div class="eyear">2020</div>
           <div class="edeg">Secondary School Certificate (SSC)</div>
           <div class="einst">Lions School &amp; College, Jessore</div>
-          <span class="egpa">⭐ GPA 5.00 / 5.00 — Perfect Score</span>
+          <span class="egpa">GPA 5.00 / 5.00 &mdash; Perfect Score</span>
         </div></div>
       </div>
     </div>
@@ -454,16 +450,16 @@ footer p span{color:var(--gold);}
 <section id="ach">
   <div class="achl">
     <div class="slabel sticky reveal">
-      <span class="snum">05 — Activities</span>
+      <span class="snum">05 &mdash; Activities</span>
       <h2 class="stitle">Wins &amp;<br><em>Roles</em></h2>
     </div>
     <div class="achg reveal">
-      <div class="achc"><div class="achi">🏆</div><div class="acht"><h4>ICT Olympiad Season 3</h4><p>Campus Ambassador & Participant — promoted platform engagement and represented the institution in competitive tech events.</p></div></div>
-      <div class="achc"><div class="achi">🚀</div><div class="acht"><h4>Shohoj Coding Ambassador</h4><p>Campus Ambassador — drove awareness of coding education and grew the developer community at NUBTK.</p></div></div>
-      <div class="achc"><div class="achi">👁️</div><div class="acht"><h4>Computer Vision Expertise</h4><p>Hands-on mastery of face recognition and real-world CV applications through independent project development.</p></div></div>
-      <div class="achc"><div class="achi">📚</div><div class="acht"><h4>Perfect Academic Record</h4><p>GPA 5.00 in both SSC and HSC — consistent academic excellence throughout secondary education.</p></div></div>
-      <div class="achc"><div class="achi">🤝</div><div class="acht"><h4>Team Collaborator</h4><p>Active contributor to team projects and collaborative coding initiatives, embracing open-source culture.</p></div></div>
-      <div class="achc"><div class="achi">🌱</div><div class="acht"><h4>Continuous Learner</h4><p>Constantly applying emerging technologies — currently expanding into cloud integration and AI solutions.</p></div></div>
+      <div class="achc"><div class="achi">&#127942;</div><div class="acht"><h4>ICT Olympiad Season 3</h4><p>Campus Ambassador &amp; Participant &mdash; promoted platform engagement and represented the institution in competitive tech events.</p></div></div>
+      <div class="achc"><div class="achi">&#128640;</div><div class="acht"><h4>Shohoj Coding Ambassador</h4><p>Campus Ambassador &mdash; drove awareness of coding education and grew the developer community at NUBTK.</p></div></div>
+      <div class="achc"><div class="achi">&#128065;</div><div class="acht"><h4>Computer Vision Expertise</h4><p>Hands-on mastery of face recognition and real-world CV applications through independent project development.</p></div></div>
+      <div class="achc"><div class="achi">&#128218;</div><div class="acht"><h4>Perfect Academic Record</h4><p>GPA 5.00 in both SSC and HSC &mdash; consistent academic excellence throughout secondary education.</p></div></div>
+      <div class="achc"><div class="achi">&#129309;</div><div class="acht"><h4>Team Collaborator</h4><p>Active contributor to team projects and collaborative coding initiatives, embracing open-source culture.</p></div></div>
+      <div class="achc"><div class="achi">&#127807;</div><div class="acht"><h4>Continuous Learner</h4><p>Constantly applying emerging technologies &mdash; currently expanding into cloud integration and AI solutions.</p></div></div>
     </div>
   </div>
 </section>
@@ -474,18 +470,23 @@ footer p span{color:var(--gold);}
     <h2 class="chl reveal">Let's Work<br><em>Together</em></h2>
     <p class="csub reveal">Looking for internships, research collaborations, and exciting projects. I respond within 24 hours.</p>
     <div class="cms reveal">
-      <a href="/cdn-cgi/l/email-protection#65160e1104160b0c0857555550250208040c094b060a08" class="citem">
-        <div class="cico">✉️</div><div><div class="clabel">Email</div><div class="cval"><span class="__cf_email__" data-cfemail="1f6c746b7e6c7176722d2f2f2a5f78727e7673317c7072">[email&#160;protected]</span></div></div>
+      <a href="mailto:sktasnim2005@gmail.com" class="citem">
+        <div class="cico">&#9993;</div>
+        <div><div class="clabel">Email</div><div class="cval">sktasnim2005@gmail.com</div></div>
       </a>
       <a href="https://github.com/sktasnim2005" target="_blank" class="citem">
-        <div class="cico"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></div>
+        <div class="cico">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </div>
         <div><div class="clabel">GitHub</div><div class="cval">github.com/sktasnim2005</div></div>
       </a>
       <a href="https://linkedin.com/in/sktasnim" target="_blank" class="citem">
-        <div class="cico">💼</div><div><div class="clabel">LinkedIn</div><div class="cval">linkedin.com/in/sktasnim</div></div>
+        <div class="cico">&#128188;</div>
+        <div><div class="clabel">LinkedIn</div><div class="cval">linkedin.com/in/sktasnim</div></div>
       </a>
       <a href="tel:+8801828285259" class="citem">
-        <div class="cico">📞</div><div><div class="clabel">Phone</div><div class="cval">+880 1828 285259</div></div>
+        <div class="cico">&#128222;</div>
+        <div><div class="clabel">Phone</div><div class="cval">+880 1828 285259</div></div>
       </a>
     </div>
   </div>
@@ -506,30 +507,44 @@ footer p span{color:var(--gold);}
 </section>
 
 <footer>
-  <p>© 2024 <span>SK. Tasnim Ur Rahman</span> — Khulna, Bangladesh</p>
+  <p>&copy; 2024 <span>SK. Tasnim Ur Rahman</span> &mdash; Khulna, Bangladesh</p>
   <div class="fl">
     <a href="https://github.com/sktasnim2005" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/sk-tasnim-ur-rahman-6742ab373/" target="_blank">LinkedIn</a>
-    <a href="/cdn-cgi/l/email-protection#4c3f27382d3f2225217e7c7c790c2b212d2520622f2321">Email</a>
+    <a href="https://linkedin.com/in/sktasnim" target="_blank">LinkedIn</a>
+    <a href="mailto:sktasnim2005@gmail.com">Email</a>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // Navbar scroll
 const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
+window.addEventListener('scroll', function() {
   nav.classList.toggle('sc', window.scrollY > 50);
-  const secs = document.querySelectorAll('section[id]');
-  const links = document.querySelectorAll('.nl a');
-  let cur = '';
-  secs.forEach(s => { if (window.scrollY >= s.offsetTop - 130) cur = s.id; });
-  links.forEach(a => a.classList.toggle('act', a.getAttribute('href') === '#' + cur));
+  var secs = document.querySelectorAll('section[id]');
+  var links = document.querySelectorAll('.nl a');
+  var cur = '';
+  secs.forEach(function(s) { if (window.scrollY >= s.offsetTop - 130) cur = s.id; });
+  links.forEach(function(a) { a.classList.toggle('act', a.getAttribute('href') === '#' + cur); });
 });
 
 // Reveal on scroll
-const obs = new IntersectionObserver((entries) => {
-  entries.forEach((e, i) => {
-    if (e.isIntersecting) setTimeout(() => e.target.classList.add('vis'), i * 70);
+var obs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e, i) {
+    if (e.isIntersecting) setTimeout(function() { e.target.classList.add('vis'); }, i * 70);
   });
 }, { threshold: 0.1 });
-document.querySelectorAll('.reveal').forEach(el => obs.observe(el))
+document.querySelectorAll('.reveal').forEach(function(el) { obs.observe(el); });
+
+// Skill bars
+var bObs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) setTimeout(function() { e.target.classList.add('on'); }, 150);
+  });
+}, { threshold: 0.4 });
+document.querySelectorAll('.sf').forEach(function(b) {
+  b.style.width = (parseFloat(b.getAttribute('data-w')) * 100) + '%';
+  bObs.observe(b);
+});
+</script>
+</body>
+</html>
