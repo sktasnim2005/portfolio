@@ -195,13 +195,35 @@ nav.sc{background:var(--nav-bg);backdrop-filter:blur(12px);box-shadow:0 1px 0 va
 /* ===== ACHIEVEMENTS ===== */
 #ach{padding:7rem 3rem;transition:background .4s;}
 .achl{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:start;}
-.achg{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;}
-.achc{display:flex;gap:.9rem;align-items:flex-start;padding:1.4rem;background:var(--card-bg);
-  border:1px solid var(--border);border-radius:4px;transition:all .3s;}
-.achc:hover{border-color:rgba(201,168,76,.35);box-shadow:0 6px 20px var(--sh);transform:translateY(-2px);}
-.achi{font-size:1.3rem;flex-shrink:0;margin-top:.1rem;}
-.acht h4{font-size:.88rem;font-weight:600;margin-bottom:.3rem;color:var(--ink);}
-.acht p{font-size:.78rem;color:var(--ink2);line-height:1.65;}
+
+/* Experience Timeline Accordion */
+.exp-timeline{display:flex;flex-direction:column;gap:.85rem;}
+.exp-item{background:var(--card-bg);border:1px solid var(--border);border-radius:6px;
+  overflow:hidden;transition:border-color .3s,box-shadow .3s;}
+.exp-item.open{border-color:rgba(201,168,76,.4);box-shadow:0 8px 30px var(--sh2);}
+.exp-trigger{display:flex;align-items:center;gap:1rem;padding:1.25rem 1.5rem;cursor:pointer;
+  user-select:none;width:100%;background:none;border:none;text-align:left;flex-wrap:wrap;}
+.exp-trigger:hover .exp-org{color:var(--gold);}
+.exp-icon{width:38px;height:38px;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.2);
+  border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+.exp-meta{flex:1;min-width:0;}
+.exp-org{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--ink);
+  margin-bottom:.15rem;line-height:1.2;transition:color .2s;}
+.exp-role{display:block;font-size:.75rem;font-weight:500;color:var(--gold);margin-bottom:.1rem;}
+.exp-date{font-family:'DM Mono',monospace;font-size:.58rem;color:var(--muted);letter-spacing:.06em;}
+.exp-right{display:flex;align-items:center;gap:.6rem;flex-shrink:0;}
+.exp-badge{font-family:'DM Mono',monospace;font-size:.55rem;padding:.2rem .6rem;background:rgba(34,197,94,.1);
+  border:1px solid rgba(34,197,94,.25);color:#22c55e;border-radius:100px;letter-spacing:.08em;text-transform:uppercase;}
+.exp-arrow{width:20px;height:20px;display:flex;align-items:center;justify-content:center;
+  color:var(--muted);transition:transform .35s ease,color .2s;}
+.exp-item.open .exp-arrow{transform:rotate(180deg);color:var(--gold);}
+.exp-body{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.23,1,.32,1),padding .3s;}
+.exp-item.open .exp-body{max-height:300px;}
+.exp-points{list-style:none;display:flex;flex-direction:column;gap:.5rem;
+  padding:.1rem 1.5rem 1.4rem 1.5rem;border-top:1px solid var(--border);}
+.exp-points li{font-size:.82rem;color:var(--ink2);line-height:1.7;padding-left:1.1rem;position:relative;padding-top:.4rem;}
+.exp-points li::before{content:'';position:absolute;left:0;top:1.05rem;width:5px;height:5px;
+  background:var(--gold);border-radius:50%;}
 
 /* ===== CONTACT ===== */
 #contact{padding:7rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;transition:background .4s;}
@@ -486,16 +508,126 @@ footer p span{color:var(--gold);}
 <section id="ach">
   <div class="achl">
     <div class="slabel sticky reveal">
-      <span class="snum">05 &mdash; Activities</span>
-      <h2 class="stitle">Wins &amp;<br><em>Roles</em></h2>
+      <span class="snum">05 &mdash; Experience</span>
+      <h2 class="stitle">Leadership<br>&amp; <em>Roles</em></h2>
     </div>
-    <div class="achg reveal">
-      <div class="achc"><div class="achi">&#127942;</div><div class="acht"><h4>ICT Olympiad Season 3</h4><p>Campus Ambassador &amp; Participant &mdash; promoted platform engagement and represented the institution in competitive tech events.</p></div></div>
-      <div class="achc"><div class="achi">&#128640;</div><div class="acht"><h4>Shohoj Coding Ambassador</h4><p>Campus Ambassador &mdash; drove awareness of coding education and grew the developer community at NUBTK.</p></div></div>
-      <div class="achc"><div class="achi">&#128065;</div><div class="acht"><h4>Computer Vision Expertise</h4><p>Hands-on mastery of face recognition and real-world CV applications through independent project development.</p></div></div>
-      <div class="achc"><div class="achi">&#128218;</div><div class="acht"><h4>Perfect Academic Record</h4><p>GPA 5.00 in both SSC and HSC &mdash; consistent academic excellence throughout secondary education.</p></div></div>
-      <div class="achc"><div class="achi">&#129309;</div><div class="acht"><h4>Team Collaborator</h4><p>Active contributor to team projects and collaborative coding initiatives, embracing open-source culture.</p></div></div>
-      <div class="achc"><div class="achi">&#127807;</div><div class="acht"><h4>Continuous Learner</h4><p>Constantly applying emerging technologies &mdash; currently expanding into cloud integration and AI solutions.</p></div></div>
+    <div class="exp-timeline reveal">
+
+      <!-- Programming Hero -->
+      <div class="exp-item">
+        <button class="exp-trigger" onclick="toggleExp(this)">
+          <div class="exp-icon">&#128187;</div>
+          <div class="exp-meta">
+            <h4 class="exp-org">Programming Hero</h4>
+            <span class="exp-role">Campus Hero</span>
+            <span class="exp-date">Feb 2026 &mdash; Present</span>
+          </div>
+          <div class="exp-right">
+            <span class="exp-badge">Active</span>
+            <span class="exp-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </div>
+        </button>
+        <div class="exp-body">
+          <ul class="exp-points">
+            <li>Empowering students to start their journey in web development and programming through hands-on guidance.</li>
+            <li>Organizing "Code-Along" sessions to foster a collaborative and supportive learning environment on campus.</li>
+            <li>Assisting peers in navigating Programming Hero's curriculum and accessing career placement services.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- YUNet -->
+      <div class="exp-item">
+        <button class="exp-trigger" onclick="toggleExp(this)">
+          <div class="exp-icon">&#127757;</div>
+          <div class="exp-meta">
+            <h4 class="exp-org">Youth Upskill Network &mdash; YUNet</h4>
+            <span class="exp-role">Campus Coordinator</span>
+            <span class="exp-date">Jan 2026 &mdash; Present</span>
+          </div>
+          <div class="exp-right">
+            <span class="exp-badge">Active</span>
+            <span class="exp-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </div>
+        </button>
+        <div class="exp-body">
+          <ul class="exp-points">
+            <li>Leading strategic planning and execution of skill-sharing initiatives that empower students across disciplines.</li>
+            <li>Facilitating networking opportunities between students and industry professionals through YUNet platforms.</li>
+            <li>Managing logistics for on-campus events focused on leadership, soft skills, and technical training.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Interactive Cares -->
+      <div class="exp-item">
+        <button class="exp-trigger" onclick="toggleExp(this)">
+          <div class="exp-icon">&#128161;</div>
+          <div class="exp-meta">
+            <h4 class="exp-org">Interactive Cares</h4>
+            <span class="exp-role">Campus Leader</span>
+            <span class="exp-date">Dec 2025 &mdash; Present</span>
+          </div>
+          <div class="exp-right">
+            <span class="exp-badge">Active</span>
+            <span class="exp-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </div>
+        </button>
+        <div class="exp-body">
+          <ul class="exp-points">
+            <li>Led a team of student representatives to promote digital learning and career-centric skill development programs.</li>
+            <li>Managed community engagement strategies resulting in increased enrollment for professional certificate courses.</li>
+            <li>Organized workshops and webinars focused on bridging the gap between academic learning and industry requirements.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Shohoj Coding -->
+      <div class="exp-item">
+        <button class="exp-trigger" onclick="toggleExp(this)">
+          <div class="exp-icon">&#128187;</div>
+          <div class="exp-meta">
+            <h4 class="exp-org">Shohoj Coding</h4>
+            <span class="exp-role">Campus Ambassador</span>
+            <span class="exp-date">Sep 2025 &mdash; Present</span>
+          </div>
+          <div class="exp-right">
+            <span class="exp-badge">Active</span>
+            <span class="exp-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </div>
+        </button>
+        <div class="exp-body">
+          <ul class="exp-points">
+            <li>Cultivated a strong coding culture on campus by promoting programming resources, bootcamps, and learning paths.</li>
+            <li>Mentored aspiring developers and guided them toward appropriate learning paths in software development.</li>
+            <li>Represented the brand at local tech events and social media campaigns to expand platform reach.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ICT Olympiad -->
+      <div class="exp-item">
+        <button class="exp-trigger" onclick="toggleExp(this)">
+          <div class="exp-icon">&#127942;</div>
+          <div class="exp-meta">
+            <h4 class="exp-org">ICT Olympiad Bangladesh</h4>
+            <span class="exp-role">Campus Ambassador</span>
+            <span class="exp-date">Jul 2025 &mdash; Present</span>
+          </div>
+          <div class="exp-right">
+            <span class="exp-badge">Active</span>
+            <span class="exp-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </div>
+        </button>
+        <div class="exp-body">
+          <ul class="exp-points">
+            <li>Acted as the primary point of contact between ICT Olympiad Bangladesh and the campus community.</li>
+            <li>Spearheaded promotional campaigns to increase student participation in national ICT competitions.</li>
+            <li>Coordinated with campus clubs and faculty to organize awareness seminars and registration drives.</li>
+          </ul>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -571,6 +703,15 @@ function setTheme(t) {
   setTheme(saved);
 })();
 
+function toggleExp(btn) {
+  var item = btn.closest('.exp-item');
+  var isOpen = item.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.exp-item.open').forEach(function(el) { el.classList.remove('open'); });
+  // Open clicked if it was closed
+  if (!isOpen) item.classList.add('open');
+}
+
 // Navbar scroll
 var nav = document.getElementById('nav');
 window.addEventListener('scroll', function() {
@@ -596,13 +737,4 @@ document.querySelectorAll('.reveal').forEach(function(el) {
 // Skill bars
 var bObs = new IntersectionObserver(function(entries) {
   entries.forEach(function(e) {
-    if (e.isIntersecting) setTimeout(function() { e.target.classList.add('on'); }, 150);
-  });
-}, { threshold: 0.4 });
-document.querySelectorAll('.sf').forEach(function(b) {
-  b.style.width = (parseFloat(b.getAttribute('data-w')) * 100) + '%';
-  bObs.observe(b);
-});
-</script>
-</body>
-</html>
+    i
