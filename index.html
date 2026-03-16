@@ -294,6 +294,7 @@ footer p span{color:var(--gold);}
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#education">Education</a></li>
+    <li><a href="#ach">Experience</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-right">
@@ -322,7 +323,7 @@ footer p span{color:var(--gold);}
     <div class="hmeta">
       <div><div class="mn">5.0<em>&#9733;</em></div><div class="ml">HSC &amp; SSC GPA</div></div>
       <div><div class="mn">3<em>+</em></div><div class="ml">Projects Built</div></div>
-      <div><div class="mn">2</div><div class="ml">Ambassador Roles</div></div>
+      <div><div class="mn">5</div><div class="ml">Leadership Roles</div></div>
     </div>
   </div>
   <div class="hr">
@@ -680,7 +681,7 @@ footer p span{color:var(--gold);}
 </section>
 
 <footer>
-  <p>&copy; 2024 <span>SK. Tasnim Ur Rahman</span> &mdash; Khulna, Bangladesh</p>
+  <p>&copy; 2026 <span>SK. Tasnim Ur Rahman</span> &mdash; Khulna, Bangladesh</p>
   <div class="fl">
     <a href="https://github.com/sktasnim2005" target="_blank">GitHub</a>
     <a href="https://www.linkedin.com/in/sk-tasnim-ur-rahman-6742ab373/" target="_blank">LinkedIn</a>
@@ -737,4 +738,13 @@ document.querySelectorAll('.reveal').forEach(function(el) {
 // Skill bars
 var bObs = new IntersectionObserver(function(entries) {
   entries.forEach(function(e) {
-    i
+    if (e.isIntersecting) setTimeout(function() { e.target.classList.add('on'); }, 150);
+  });
+}, { threshold: 0.4 });
+document.querySelectorAll('.sf').forEach(function(b) {
+  b.style.width = (parseFloat(b.getAttribute('data-w')) * 100) + '%';
+  bObs.observe(b);
+});
+</script>
+</body>
+</html>
