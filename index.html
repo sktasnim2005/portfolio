@@ -15,23 +15,12 @@ html{scroll-behavior:smooth;}
 }
 body{background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;overflow-x:hidden;}
 
-/* UPLOAD BANNER */
-#banner{position:fixed;top:0;left:0;right:0;z-index:300;background:var(--ink);color:var(--bg);
-  padding:.55rem 2rem;display:flex;align-items:center;justify-content:center;gap:.9rem;
-  font-family:'DM Mono',monospace;font-size:.7rem;letter-spacing:.05em;transition:transform .4s;}
-#banner.gone{transform:translateY(-100%);}
-#banner span.hi{color:var(--gold);}
-#ubtn{background:var(--gold);color:var(--ink);border:none;padding:.28rem .85rem;border-radius:2px;
-  font-family:'DM Mono',monospace;font-size:.66rem;font-weight:500;cursor:pointer;letter-spacing:.05em;}
-#ubtn:hover{opacity:.85;}
-#xbtn{position:absolute;right:1.5rem;background:none;border:none;color:var(--muted);cursor:pointer;font-size:1rem;}
-#photo-input{display:none;}
+
 
 /* NAV */
-nav{position:fixed;top:36px;left:0;right:0;z-index:200;padding:1.1rem 3rem;
-  display:flex;justify-content:space-between;align-items:center;transition:background .3s,box-shadow .3s,top .4s;}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.1rem 3rem;
+  display:flex;justify-content:space-between;align-items:center;transition:background .3s,box-shadow .3s;}
 nav.sc{background:rgba(248,245,240,.95);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--border);}
-nav.up{top:0;}
 .logo{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--ink);text-decoration:none;letter-spacing:-.02em;}
 .logo em{font-style:italic;color:var(--gold);}
 .nl{display:flex;gap:2.2rem;list-style:none;}
@@ -258,15 +247,7 @@ footer p span{color:var(--gold);}
 </head>
 <body>
 
-<input type="file" id="photo-input" accept="image/*">
 
-<!-- BANNER -->
-<div id="banner">
-  <span class="hi">📸</span>
-  <span>Personalize your portfolio — add your photo!</span>
-  <button id="ubtn" onclick="document.getElementById('photo-input').click()">Upload Photo</button>
-  <button id="xbtn" onclick="hideBanner()" title="Close">✕</button>
-</div>
 
 <!-- NAV -->
 <nav id="nav">
@@ -278,7 +259,7 @@ footer p span{color:var(--gold);}
     <li><a href="#education">Education</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="mailto:sktasnim2005@gmail.com" class="ncta">Hire Me</a>
+  <a href="/cdn-cgi/l/email-protection#87f4ecf3e6f4e9eeeab5b7b7b2c7e0eae6eeeba9e4e8ea" class="ncta">Hire Me</a>
 </nav>
 
 <!-- HERO -->
@@ -292,7 +273,7 @@ footer p span{color:var(--gold);}
     <p class="htag">3rd year Computer Science student at Northern University of Business and Technology, Khulna — passionate about AI, computer vision, and building software that matters.</p>
     <div class="hbtns">
       <a href="#projects" class="bp">View My Work</a>
-      <a href="mailto:sktasnim2005@gmail.com" class="bo">Get In Touch</a>
+      <a href="/cdn-cgi/l/email-protection#14677f6075677a7d7926242421547379757d783a777b79" class="bo">Get In Touch</a>
     </div>
     <div class="hmeta">
       <div><div class="mn">5.0<em>★</em></div><div class="ml">HSC &amp; SSC GPA</div></div>
@@ -493,8 +474,8 @@ footer p span{color:var(--gold);}
     <h2 class="chl reveal">Let's Work<br><em>Together</em></h2>
     <p class="csub reveal">Looking for internships, research collaborations, and exciting projects. I respond within 24 hours.</p>
     <div class="cms reveal">
-      <a href="mailto:sktasnim2005@gmail.com" class="citem">
-        <div class="cico">✉️</div><div><div class="clabel">Email</div><div class="cval">sktasnim2005@gmail.com</div></div>
+      <a href="/cdn-cgi/l/email-protection#65160e1104160b0c0857555550250208040c094b060a08" class="citem">
+        <div class="cico">✉️</div><div><div class="clabel">Email</div><div class="cval"><span class="__cf_email__" data-cfemail="1f6c746b7e6c7176722d2f2f2a5f78727e7673317c7072">[email&#160;protected]</span></div></div>
       </a>
       <a href="https://github.com/sktasnim2005" target="_blank" class="citem">
         <div class="cico"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></div>
@@ -528,48 +509,12 @@ footer p span{color:var(--gold);}
   <p>© 2024 <span>SK. Tasnim Ur Rahman</span> — Khulna, Bangladesh</p>
   <div class="fl">
     <a href="https://github.com/sktasnim2005" target="_blank">GitHub</a>
-    <a href="https://linkedin.com/in/sktasnim" target="_blank">LinkedIn</a>
-    <a href="mailto:sktasnim2005@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/sk-tasnim-ur-rahman-6742ab373/" target="_blank">LinkedIn</a>
+    <a href="/cdn-cgi/l/email-protection#4c3f27382d3f2225217e7c7c790c2b212d2520622f2321">Email</a>
   </div>
 </footer>
 
-<script>
-// Photo upload
-const photoInput = document.getElementById('photo-input');
-const profilePhoto = document.getElementById('profile-photo');
-const placeholder = document.getElementById('ph-placeholder');
-
-photoInput.addEventListener('change', function(e) {
-  const file = e.target.files[0];
-  if (!file) return;
-  const reader = new FileReader();
-  reader.onload = function(ev) {
-    profilePhoto.src = ev.target.result;
-    profilePhoto.classList.add('on');
-    placeholder.classList.add('off');
-    try { sessionStorage.setItem('pPhoto', ev.target.result); } catch(e) {}
-    hideBanner();
-  };
-  reader.readAsDataURL(file);
-});
-
-// Restore saved photo
-try {
-  const saved = sessionStorage.getItem('pPhoto');
-  if (saved) {
-    profilePhoto.src = saved;
-    profilePhoto.classList.add('on');
-    placeholder.classList.add('off');
-    document.getElementById('banner').classList.add('gone');
-    document.getElementById('nav').classList.add('up');
-  }
-} catch(e) {}
-
-function hideBanner() {
-  document.getElementById('banner').classList.add('gone');
-  document.getElementById('nav').classList.add('up');
-}
-
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Navbar scroll
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
@@ -587,20 +532,4 @@ const obs = new IntersectionObserver((entries) => {
     if (e.isIntersecting) setTimeout(() => e.target.classList.add('vis'), i * 70);
   });
 }, { threshold: 0.1 });
-document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-
-// Skill bars
-const bObs = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      setTimeout(() => e.target.classList.add('on'), 150);
-    }
-  });
-}, { threshold: 0.4 });
-document.querySelectorAll('.sf').forEach(b => {
-  b.style.width = (parseFloat(b.getAttribute('data-w')) * 100) + '%';
-  bObs.observe(b);
-});
-</script>
-</body>
-</html>
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el))
