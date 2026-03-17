@@ -193,8 +193,8 @@ nav.sc{background:var(--nav-bg);backdrop-filter:blur(12px);box-shadow:0 1px 0 va
 .egpa{display:inline-flex;align-items:center;gap:.35rem;font-family:'DM Mono',monospace;font-size:.6rem;padding:.25rem .6rem;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.25);color:var(--gold);border-radius:2px;letter-spacing:.04em;}
 .esub{margin-top:.65rem;font-size:.76rem;color:var(--muted);line-height:1.6;}
 
-/* EXPERIENCE */
-#ach{padding:7rem 3rem;transition:background .4s;}
+/* EXPERIENCE & ACHIEVEMENTS */
+#ach, #ach-achievements{padding:7rem 3rem;transition:background .4s;}
 .achl{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:start;}
 .exp-timeline{display:flex;flex-direction:column;gap:.85rem;}
 .exp-item{background:var(--card-bg);border:1px solid var(--border);border-radius:6px;overflow:hidden;transition:border-color .3s,box-shadow .3s;}
@@ -261,7 +261,7 @@ footer p span{color:var(--gold);}
 @media(max-width:768px){
   nav{padding:1rem 1.5rem;}
   .nl,.ncta{display:none;}
-  #hero,.hl,#about,#skills,#projects,#education,#ach,#contact{padding:4rem 1.5rem;}
+  #hero,.hl,#about,#skills,#projects,#education,#ach,#ach-achievements,#contact{padding:4rem 1.5rem;}
   footer{padding:1.4rem 1.5rem;flex-direction:column;text-align:center;}
   .theme-toggle{gap:.2rem;}
   .tm-btn{width:24px;height:24px;font-size:.7rem;}
@@ -279,6 +279,7 @@ footer p span{color:var(--gold);}
     <li><a href="#projects">Projects</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#ach">Experience</a></li>
+    <li><a href="#ach-achievements">Achievements</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-right">
@@ -287,7 +288,7 @@ footer p span{color:var(--gold);}
       <button class="tm-btn" id="btn-dark" onclick="setTheme('dark')" title="Dark Mode">&#9790;</button>
       <button class="tm-btn" id="btn-night" onclick="setTheme('night')" title="Night Mode">&#9899;</button>
     </div>
-    <a href="/cdn-cgi/l/email-protection#c0b3abb4a1b3aea9adf2f0f0f580a7ada1a9aceea3afad" class="ncta">Hire Me</a>
+    <a href="mailto:your.email@example.com" class="ncta">Hire Me</a>
   </div>
 </nav>
 
@@ -302,7 +303,7 @@ footer p span{color:var(--gold);}
     <p class="htag">3rd year Computer Science student at Northern University of Business and Technology, Khulna &mdash; passionate about AI, computer vision, and building software that matters.</p>
     <div class="hbtns">
       <a href="#projects" class="bp">View My Work</a>
-      <a href="/cdn-cgi/l/email-protection#c5b6aeb1a4b6abaca8f7f5f5f085a2a8a4aca9eba6aaa8" class="bo">Get In Touch</a>
+      <a href="#contact" class="bo">Get In Touch</a>
     </div>
     <div class="hmeta">
       <div><div class="mn">5.0<em>&#9733;</em></div><div class="ml">HSC &amp; SSC GPA</div></div>
@@ -631,13 +632,73 @@ footer p span{color:var(--gold);}
   </div>
 </section>
 
+<!-- ACHIEVEMENTS -->
+<section id="ach-achievements">
+  <div class="achl">
+    <div class="slabel sticky reveal">
+      <span class="snum">06 &mdash; Achievements</span>
+      <h2 class="stitle">Awards<br>&amp; <em>Recognition</em></h2>
+    </div>
+    <div class="pcards reveal">
+      <div class="pcard">
+        <div class="ph2"><span class="pnum">ACHIEVEMENT 001</span><span class="pfeat">Champion</span></div>
+        <h3 class="ptitle">Senior Group Champion | IUPC</h3>
+        <p class="pdesc">Achieved <strong>1st Place</strong> in the Intra University Programming Contest (IUPC) Senior Group category at Northern University of Business &amp; Technology, Khulna. Demonstrated exceptional problem-solving abilities and algorithmic expertise under competitive pressure.</p>
+        <div class="ptech">
+          <span class="tpill">Algorithms</span>
+          <span class="tpill">Data Structures</span>
+          <span class="tpill">C++</span>
+          <span class="tpill">Problem Solving</span>
+        </div>
+        <div class="pfoot">
+          <span class="plink">Northern University of Business &amp; Technology &mdash; August 2025</span>
+          <div class="pstat" style="color:#22c55e"><div class="pdot" style="background:#22c55e"></div>1st Place</div>
+        </div>
+      </div>
+
+      <div class="pcard">
+        <div class="ph2"><span class="pnum">ACHIEVEMENT 002</span><span class="pfeat">Champion</span></div>
+        <h3 class="ptitle">Senior Group Champion | CSE Fest IUPC</h3>
+        <p class="pdesc">Secured <strong>1st Place</strong> in the CSE Fest – Intra University Programming Contest (IUPC) Senior Group, reinforcing competitive programming excellence and consistent performance in high-stakes technical challenges.</p>
+        <div class="ptech">
+          <span class="tpill">Algorithms</span>
+          <span class="tpill">Data Structures</span>
+          <span class="tpill">C++</span>
+          <span class="tpill">Problem Solving</span>
+        </div>
+        <div class="pfoot">
+          <span class="plink">Northern University of Business &amp; Technology &mdash; December 2025</span>
+          <div class="pstat" style="color:#22c55e"><div class="pdot" style="background:#22c55e"></div>1st Place</div>
+        </div>
+      </div>
+
+      <div class="pcard">
+        <div class="ph2"><span class="pnum">ACHIEVEMENT 003</span><span class="pfeat">Finalist</span></div>
+        <h3 class="ptitle">Top 300 Finalist | SOLVIO AI Hackathon</h3>
+        <p class="pdesc"><strong>Selected as Top 300 Finalist out of 3,300+ participants</strong> in the SOLVIO AI Hackathon organized by Sheba Platform Limited. Developed <strong>Oushodh-Shield (Medicine Guardian)</strong> — a high-impact AI-powered solution to combat counterfeit medicine in Bangladesh. Designed a security framework using encrypted QR codes and proposed a user-centric AI platform for medicine safety.</p>
+        <div class="ptech">
+          <span class="tpill">AI/ML</span>
+          <span class="tpill">QR Code Security</span>
+          <span class="tpill">Healthcare Tech</span>
+          <span class="tpill">Problem Solving</span>
+          <span class="tpill">Cryptography</span>
+        </div>
+        <div class="pfoot">
+          <span class="plink">Organized by Sheba Platform Limited</span>
+          <div class="pstat" style="color:#c9a84c"><div class="pdot" style="background:#c9a84c"></div>Top 300</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
   <div>
     <h2 class="chl reveal">Let's Work<br><em>Together</em></h2>
     <p class="csub reveal">Looking for internships, research collaborations, and exciting projects. I respond within 24 hours.</p>
     <div class="cms reveal">
-      <a href="/cdn-cgi/l/email-protection#17647c637664797e7a2527272257707a767e7b3974787a" class="citem">
+      <a href="mailto:your.email@example.com" class="citem">
         <div class="cico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
         <span class="clabel">Email</span>
       </a>
@@ -663,7 +724,7 @@ footer p span{color:var(--gold);}
         <div><div class="ccn">3+</div><div class="ccl">Projects</div></div>
         <div><div class="ccn">5.0</div><div class="ccl">Academic GPA</div></div>
         <div><div class="ccn">4+</div><div class="ccl">Languages</div></div>
-        <div><div class="ccn">2</div><div class="ccl">Ambassador Roles</div></div>
+        <div><div class="ccn">5</div><div class="ccl">Ambassador Roles</div></div>
       </div>
       <div class="avail"><div class="adot"></div><span class="atxt">Available for internships &amp; collaborations</span></div>
     </div>
@@ -672,9 +733,13 @@ footer p span{color:var(--gold);}
 
 <footer>
   <p>&copy; 2026 <span>SK. Tasnim Ur Rahman</span> &mdash; Khulna, Bangladesh</p>
+  <div class="fl">
+    <a href="https://github.com/sktasnim2005" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/sk-tasnim-ur-rahman-6742ab373/" target="_blank">LinkedIn</a>
+  </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 function setTheme(t) {
   document.documentElement.setAttribute('data-theme', t);
   localStorage.setItem('theme', t);
@@ -705,5 +770,17 @@ window.addEventListener('scroll', function() {
 });
 
 var obs = new IntersectionObserver(function(entries) {
-  entries.forEach(function(e, i) {
-    if (e.isInter
+  entries.forEach(function(e) {
+    if (e.isIntersecting) {
+      e.target.classList.add('vis');
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.reveal').forEach(function(el) {
+  el.classList.add('anim');
+  obs.observe(el);
+});
+</script>
+</body>
+</html>
